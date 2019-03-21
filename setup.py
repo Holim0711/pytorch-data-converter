@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 requirements = [
     'setuptools',
     'numpy',
-    'skimage',
+    'scikit-image',
 ]
 
 
