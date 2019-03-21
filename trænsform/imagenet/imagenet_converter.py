@@ -10,7 +10,7 @@ _normalizer = tvtf.Normalize(
 
 
 class BasicTrfm(tvtf.Compose):
-    def __init__(random=True):
+    def __init__(self, random=True):
         trfm = [
             tvtf.ToPILImage(),
             tvtf.Resize(256),
@@ -35,7 +35,7 @@ class BasicTrfm(tvtf.Compose):
 
 
 class DirtyTrfm(tvtf.Compose):
-    def __init__(random=True):
+    def __init__(self, random=True):
         trfm = [
             tvtf.Lambda(toRGB),
             tvtf.Lambda(invert),
