@@ -2,6 +2,7 @@ from skimage.color import gray2rgb
 from skimage.color import rgba2rgb
 from skimage import img_as_ubyte
 from PIL import Image
+import warnings
 
 
 def toRGB(image, bg=(1, 1, 1)):
@@ -21,7 +22,11 @@ def toRGB(image, bg=(1, 1, 1)):
 
     image = rgba2rgb(image, bg)
 
-    return img_as_ubyte(image)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        image = img_as_ubyte(image)
+
+    return image
 
 
 def invert(image):
