@@ -1,2 +1,2 @@
-from .imagenet_converter import BasicTrfm
-from .imagenet_converter import DirtyTrfm
+from .converter import BasicTrfm
+from .converter import DirtyTrfm
