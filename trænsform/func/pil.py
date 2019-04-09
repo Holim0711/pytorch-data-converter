@@ -16,13 +16,10 @@ class SquareResize():
         else:
             x, y = self.size * x // y, self.size
 
+        img = img.resize((x, y), Image.ANTIALIAS)
+
         new = Image.new('RGB', (self.size, self.size))
 
-        new.paste(img, (
-            (self.size - x) // 2,
-            (self.size - y) // 2,
-            (self.size + x) // 2,
-            (self.size + y) // 2
-        ))
+        new.paste(img, ((self.size - x) // 2, (self.size - y) // 2))
 
         return new
