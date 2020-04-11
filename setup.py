@@ -1,13 +1,5 @@
 from setuptools import find_packages, setup
 
-
-requirements = [
-    'setuptools',
-    'numpy',
-    'scikit-image',
-]
-
-
 setup(
     name='trænsforms',
     version='0.1.0',
@@ -18,6 +10,4 @@ setup(
     description='Data converter for pytorch',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=requirements,
 )
-
